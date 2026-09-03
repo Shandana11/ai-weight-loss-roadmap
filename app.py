@@ -1,5 +1,5 @@
+import streamlit as st
 import os
-import gradio as gr
 from groq import Groq
 
 
@@ -8,7 +8,7 @@ from groq import Groq
 # -----------------------------
 
 client = Groq(
-    api_key=os.environ["GROQ_API_KEY"]
+    api_key=st.secrets["GROQ_API_KEY"]
 )
 
 
